@@ -78,7 +78,7 @@
         function addItem() {
             const input = document.getElementById('itemInput');
             if (input.value.trim() === '') return;
-            items.push({ text: input.value, status: 'pending' });
+            items.unshift({ text: input.value, status: 'pending' });
             input.value = '';
             render();
         }
